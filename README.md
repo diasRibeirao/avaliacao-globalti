@@ -15,7 +15,7 @@ conhecimentos de VueJs, pode ser feito o front com angular). Utilizar a versão 
 ### Frontend
 - Node.js v18.14.1 instalado - [**Download**](https://nodejs.org/en/download/prebuilt-installer)
 
-## Baixando o projeto
+## Baixando o Projeto
 ``` bash
   # Clonar o projeto:
   $ git clone https://github.com/diasRibeirao/avaliacao-globalti.git
@@ -56,6 +56,9 @@ conhecimentos de VueJs, pode ser feito o front com angular). Utilizar a versão 
 
 #### [**http://localhost:8081/api/swagger-ui/index.html**](http://localhost:8081/api/swagger-ui/index.html)
 
+![image](https://github.com/diasRibeirao/avaliacao-globalti/assets/29930488/945c9386-0372-4a4c-b14b-be67637a6e38)
+
+<br /><br />
 
 ## Iniciando Frontend
 ``` bash
@@ -79,6 +82,7 @@ conhecimentos de VueJs, pode ser feito o front com angular). Utilizar a versão 
   $ http://localhost:8080/
 
 ```
+![image](https://github.com/diasRibeirao/avaliacao-globalti/assets/29930488/759c833d-7287-4184-8f7a-ede137c18fd5)
 
 
 <br /><br />
