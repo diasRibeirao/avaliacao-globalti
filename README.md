@@ -65,7 +65,7 @@ conhecimentos de VueJs, pode ser feito o front com angular). Utilizar a versão 
   # Abrir outro prompt
   # Entrar no diretório do projeto:
   $ cd avaliacao-globalti
-  $ cd avaliacao-globalti-back
+  $ cd avaliacao-globalti-front
 ```
 
 ## Executando o Projeto
