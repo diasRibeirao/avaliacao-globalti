@@ -2,8 +2,7 @@ package br.com.globalti.model.dto;
 
 import br.com.globalti.controller.validation.TransferenciaAgendar;
 import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.*;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -21,6 +20,7 @@ public class TransferenciaAgendarDTO {
     private String contaDestino;
 
     @NotNull(message = "O valor da transferência é obrigatório")
+    @DecimalMin(value = "0.01", message = "O valor da transferência deve ser maior que zero")
     @Schema(example = "354.22")
     private BigDecimal valorTransferencia;
 

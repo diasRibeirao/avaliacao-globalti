@@ -60,7 +60,7 @@ public class TransferenciaService {
             efetivandoTransferencia.set(true);
 
             var transferenciasAgendadasHoje = repository
-                    .findByDataTransferenciaAndStatus(LocalDate.now(), StatusTransferencia.AGENDADO);
+                    .findByDataTransferenciaAndStatus(LocalDate.now(), StatusTransferencia.AGENDADA);
 
             if (transferenciasAgendadasHoje.isEmpty()) {
                 log.info("Não há transferências para efetivação");
@@ -69,7 +69,7 @@ public class TransferenciaService {
             }
 
             transferenciasAgendadasHoje.forEach(transferencia -> {
-                transferencia.setStatus(StatusTransferencia.TRANSFERIDO);
+                transferencia.setStatus(StatusTransferencia.CONFIRMADA);
                 repository.save(transferencia);
             });
 

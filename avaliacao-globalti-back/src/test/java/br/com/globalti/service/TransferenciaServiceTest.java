@@ -154,14 +154,14 @@ class TransferenciaServiceTest {
     void testEfetivarTransferencia() {
         Transferencia transferencia = new Transferencia();
         transferencia.setDataTransferencia(LocalDate.now());
-        transferencia.setStatus(StatusTransferencia.AGENDADO);
+        transferencia.setStatus(StatusTransferencia.AGENDADA);
 
-        when(repository.findByDataTransferenciaAndStatus(LocalDate.now(), StatusTransferencia.AGENDADO))
+        when(repository.findByDataTransferenciaAndStatus(LocalDate.now(), StatusTransferencia.AGENDADA))
                 .thenReturn(Collections.singletonList(transferencia));
 
         service.efetivarTransferencia();
 
-        assertEquals(StatusTransferencia.TRANSFERIDO, transferencia.getStatus());
+        assertEquals(StatusTransferencia.CONFIRMADA, transferencia.getStatus());
         verify(repository, times(1)).save(transferencia);
     }
 }
