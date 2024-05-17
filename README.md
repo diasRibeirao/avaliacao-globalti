@@ -62,9 +62,8 @@ conhecimentos de VueJs, pode ser feito o front com angular). Utilizar a versão 
 
 ## Iniciando Frontend
 ``` bash
-  # Clonar o projeto:
-  $ git clone https://github.com/diasRibeirao/avaliacao-globalti.git
-
+  # Ir ao diretório onde baixou/clonou o projeto principal
+  # Abrir outro prompt
   # Entrar no diretório do projeto:
   $ cd avaliacao-globalti
   $ cd avaliacao-globalti-back
