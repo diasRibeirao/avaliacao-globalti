@@ -7,5 +7,9 @@
 <script>
 export default {
   name: 'App',
+  mounted() {
+    document.title = 'Avaliação Prática Bank';
+  }
 };
+
 </script>
