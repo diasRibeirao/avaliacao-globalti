@@ -61,8 +61,7 @@ conhecimentos de VueJs, pode ser feito o front com angular). Utilizar a versão 
 <br /><br />
 
 ## Iniciando Frontend
-``` bash
-  # Ir ao diretório onde baixou/clonou o projeto principal
+``` bash  
   # Abrir outro prompt
   # Entrar no diretório do projeto:
   $ cd avaliacao-globalti
