@@ -76,7 +76,7 @@ conhecimentos de VueJs, pode ser feito o front com angular). Utilizar a versão 
   # Rodar a aplicação:
   $ npm run serve
   
-  #Acessar o sistema
+  # Acessar o sistema
   $ http://localhost:8080/
 
 ```
