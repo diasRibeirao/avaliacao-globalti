@@ -59,7 +59,7 @@ class TransferenciasControllerTest {
                 .valorTaxa(BigDecimal.valueOf(1.00))
                 .dataTransferencia(LocalDate.now())
                 .dataAgendamento(LocalDate.now())
-                .status(StatusTransferencia.AGENDADO)
+                .status(StatusTransferencia.AGENDADA)
                 .build());
 
         mockMvc.perform(MockMvcRequestBuilders.get("/v1/transferencias/1")
@@ -82,7 +82,7 @@ class TransferenciasControllerTest {
                 .valorTaxa(BigDecimal.valueOf(1.00))
                 .dataTransferencia(LocalDate.now())
                 .dataAgendamento(LocalDate.now())
-                .status(StatusTransferencia.AGENDADO)
+                .status(StatusTransferencia.AGENDADA)
                 .build()));
 
         mockMvc.perform(MockMvcRequestBuilders.get("/v1/transferencias")

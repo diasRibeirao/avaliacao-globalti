@@ -5,6 +5,7 @@ import br.com.globalti.model.dto.TransferenciaAgendarDTO;
 import br.com.globalti.utils.Utils;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
+import org.apache.commons.lang3.StringUtils;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -22,12 +23,14 @@ public class TransferenciaAgendarValidator implements ConstraintValidator<Transf
     public boolean isValid(TransferenciaAgendarDTO transferenciaAgendarDTO, ConstraintValidatorContext context) {
         List<FieldMessage> list = new ArrayList<>();
 
-        Long diasAteTransferencia = ChronoUnit.DAYS.between(
-                LocalDate.now(),
-                Utils.stringToLocalDate(transferenciaAgendarDTO.getDataTransferencia())
-        );
-        if (diasAteTransferencia < 0L) {
-            list.add(new FieldMessage("dataTransferencia", "A data da da transferência não pode ser menor que a data atual"));
+        if (!StringUtils.isBlank(transferenciaAgendarDTO.getDataTransferencia())) {
+            Long diasAteTransferencia = ChronoUnit.DAYS.between(
+                    LocalDate.now(),
+                    Utils.stringToLocalDate(transferenciaAgendarDTO.getDataTransferencia())
+            );
+            if (diasAteTransferencia < 0L) {
+                list.add(new FieldMessage("dataTransferencia", "A data da da transferência não pode ser menor que a data atual"));
+            }
         }
 
         if (transferenciaAgendarDTO.getContaOrigem().equalsIgnoreCase(transferenciaAgendarDTO.getContaDestino())) {

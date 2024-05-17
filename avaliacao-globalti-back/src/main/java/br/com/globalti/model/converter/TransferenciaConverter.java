@@ -48,7 +48,7 @@ public class TransferenciaConverter {
                 .valorTransferencia(origin.getValorTransferencia())
                 .dataTransferencia(Utils.stringToLocalDate(origin.getDataTransferencia()))
                 .dataAgendamento(LocalDate.now())
-                .status(StatusTransferencia.AGENDADO)
+                .status(StatusTransferencia.AGENDADA)
                 .build();
     }
 
